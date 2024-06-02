@@ -65,3 +65,8 @@ carteira['AAPL34.SA'].rolling(252).corr(carteira['BOVA11.SA']).plot()
 ```
 
 Resultado
+
+
+<div align="center">
+<img src="https://github.com/andersoncsalles/Evolucao-correlacao/blob/main/imagens/download.png" width="700" height="500">
+</div>
