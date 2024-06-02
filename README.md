@@ -15,3 +15,53 @@ Este texto é fruto da parceria entre a DIO e o Santander no evento "Santander 2
 Link Artigo Dio
 
 Link Artigo sobre Correlação medium
+
+# Código 
+
+Para iniciar precisamos importar algumas bibliotecas, então, vamos:
+
+```
+#importando bibliotecas
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import yfinance as yf
+```
+
+Escolher os ativos
+> BDR da Apple
+
+> ETF do Ibovespa
+```
+#tinkers dos ativos
+tinkers  = ['BOVA11.SA','AAPL34.SA']
+```
+
+Seleção da janela de avaliação
+
+```
+# Janela de avaliação
+inicio = "2018-01-02"
+final = "2024-05-28"
+```
+
+```
+#Download dos valores de fechamento ajustado dos ativos
+dados = yf.download(tinkers, start= inicio, end=final )['Adj Close']
+```
+
+```
+#Visualizando a base de dados
+carteira=pd.DataFrame(dados)
+carteira.head()
+```
+
+O valor de 252 é utilizado porque o sistema bancário adota um calendário de 252 dias úteis. A função rolling "desliza" a janela de tempo nesses 252 dias, enquanto a função corr calcula a correlação entre os dois ativos. A função plot() tem como único objetivo apresentar o gráfico resultante.
+
+
+
+```
+carteira['AAPL34.SA'].rolling(252).corr(carteira['BOVA11.SA']).plot()
+```
+
+Resultado
