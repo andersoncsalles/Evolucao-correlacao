@@ -12,9 +12,7 @@ Este texto é fruto da parceria entre a DIO e o Santander no evento "Santander 2
 
 ---
 
-Link Artigo Dio
-
-Link Artigo sobre Correlação medium
+Link [Artigo sobre Correlação Medium](https://medium.com/@AndersonECSalles/correla%C3%A7%C3%A3o-em-renda-v%C3%A1riavel-09e8bfe063f1)
 
 # Código 
 
